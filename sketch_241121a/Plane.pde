@@ -2,7 +2,7 @@ class Plane {
   PVector position; 
   PVector velocity; 
   PVector acceleration; 
-  int a;     
+  int a;
 
   Plane(int x, int y) {
     position = new PVector(x, y);
@@ -15,10 +15,9 @@ class Plane {
     acceleration.add(force);
   }
 
-  void update() {
+  void move() {
     velocity.add(acceleration);
     position.add(velocity);
-
     acceleration.mult(0);
   }
   
@@ -31,7 +30,4 @@ class Plane {
     ellipse(position.x+70, position.y+20,20,20);
     quad(position.x+40, position.y+20,position.x+50, position.y+20,position.x+40, position.y+40,position.x+30, position.y+40);
   }
- 
- 
- 
 }

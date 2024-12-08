@@ -4,26 +4,33 @@ Plane plane;
 
 void setup() {
   size(400, 400);
-  plane = new Plane(width/2, height-50);
+  plane = new Plane(100, height);
 }
 
 void draw() {
-  background(255);
-  if (mousePressed) {
+ background(255);
+ playControl();
+  plane.update();
+  plane.display();
+  positionControl();
+
+}
+
+void playControl(){
+    if (mousePressed) {
     plane.applyForce(new PVector(0, -0.2));
   } else {
     plane.applyForce(new PVector(0, 0.1));
   }
+}
 
-  plane.update();
-  plane.display();
-  
-  if (plane.position.y > height - plane.r) {
-    plane.position.y = height - plane.r;
+void positionControl(){
+    if (plane.position.y > height - plane.a) {
+    plane.position.y = height - plane.a;
     plane.velocity.y = 0; 
   }
-  else if (plane.position.y < 0 + plane.r) {
-    plane.position.y = 0 + plane.r;
-    plane.velocity.y = 0; 
+  else if (plane.position.y < 0 ) {
+    plane.position.y = 0 ;
+     plane.velocity.y = 0; 
   }
 }

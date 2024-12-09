@@ -4,13 +4,13 @@ class Bullet {
   float r = 5; 
   boolean active = false;
 
-  void move() {
+  void move() { 
     x += speed;
-  }
+}
 
   void display() {
-    fill(173, 216, 230);
+    fill(98, 88, 230);
     noStroke();
     ellipse(x, y, r*2, r*2);
-  }
+   }
 }

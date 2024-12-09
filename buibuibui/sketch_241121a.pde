@@ -1,5 +1,4 @@
-// Kiro Liu Assignment4
-
+   // Kiro Liu Assignment4
 Plane plane;
 int fireballsMAX = 100; //maximum of the fireballs
 int bulletsMAX = 200;  // masimum of the bullets

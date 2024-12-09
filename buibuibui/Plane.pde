@@ -2,7 +2,7 @@ class Plane {
   PVector position; 
   PVector velocity; 
   PVector acceleration; 
-  int a;
+  int a;  //this varible help check the size of the plane when test plane if exceed the screen
 
   Plane(int x, int y) {
     position = new PVector(x, y);
